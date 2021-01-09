@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+
+\setlength{\parskip}{0.1em}
+\newcommand{\tab}{~ \qquad}
+\input{Algo1Macros}
+\usepackage{caratula} % Version modificada para usar las macros de algo1 de ~> https://github.com/bcardiff/dc-tex
+
+\begin{document}
+
+\titulo{Mini-TP de Especificaci\'on}
+\subtitulo{Ejercicios de \LaTeX}
+\fecha{}
+\materia{Algoritmos y Estructuras de Datos I}
+\grupo{Grupo XX}
+
+% Pongan cuantos integrantes quieran
+\integrante{Bond, James}{007}{bond@mi6.co.uk}
+%\integrante{Apellido, Nombre2}{002/01}{email2@dominio.com}
+%\integrante{Apellido, Nombre3}{003/01}{email3@dominio.com}
+%\integrante{Apellido, Nombre4}{004/01}{email4@dominio.com}
+
+\maketitle
+
+\section{Ejemplos}
+
+\begin{itemize}
+\item Dados dos números devolver el resto de su división
+
+\begin{proc}{cociente}{\In a,b: \ent, \Out result: \ent}{}
+    \pre{b \neq 0}
+    \post{result = a \ mod \ b}
+\end{proc}
+
+\item Un predicado: \\
+\pred{noRepe}{l:\TLista{\ent}}{\\
+\tab (\forall i:\ent)( 0 \leq i < l \implicaLuego l[i] \notin subseq(l,0,i))}
+
+\item Un auxiliar: \\
+\aux{primosMenores}{n:\ent}{\ent}{\sum_{i=2}^{n-1}\IfThenElse{soy\_primo(i)}{1}{0}}
+
+\item Una f\'ormula: \\
+$((p \y (q \lor r)) \Iff ((p \y q) \lor (p \y r))$
+
+ 
+\end{itemize}
+
+\section{Problemas}
+
+\begin{enumerate}
+
+
+\item Sea $m$ una lista de lista de tipo $\ent$, escribir el auxiliar acumPares tal que retorne la suma de todas las posiciones impares de cada secuencia.
+
+\item Sea $m$ una lista de lista de tipo $\ent$ y un entero N hacer un predicado que devuelva verdadero si alguna de las listas tiene longitud N y ademas contiene el elemento N.
+
+
+\item Escribir en \LaTeX  la expresion de los procedimientos siguientes.
+
+\begin{itemize}
+\item  \textbf{proc mayorPrimoQueDivide(in x:$\ent$, in y:$\ent$, out res: $\bool$)}: que sea verdadero si $y$ es el mayor primo que divide a $x$.
+
+\item \textbf{proc esMatrizIdentidad(in m: $\TLista{\TLista{\ent}}$, out res: $\bool$)}: que indica por verdadero o falso si una matriz cuadrada v\'alida es identidad.
+
+\end{itemize}
+\end{enumerate}
+
+
+
+
+\section{Decisiones tomadas}
+
+\end{document}
